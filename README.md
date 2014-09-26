@@ -24,6 +24,18 @@ configuration required for Heroku to camunda's applicationContext. So everything
 *should* continue to work fine, even if that applicationContext changes in the future. If not, please 
 report an issue here at GitHub!
 
+<a name="maintainer"/>
+## Maintainer
+
+Martin Schimak - [eMail](mailto:martin.schimak@plexiti.com) - [GitHub](https://github.com/martinschimak) - [Blog][plexiti]
+
+<a name="license"/>
+## License
+
+[Apache License, Version 2.0][apache-license]
+
 [heroku]: http://www.heroku.com
 [tomcat]: http://tomcat.apache.org
 [postgres]: http://www.postgresql.org
+[plexiti]: http://plexiti.com
+[apache-license]: http://www.apache.org/licenses/LICENSE-2.0.html
