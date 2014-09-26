@@ -13,6 +13,7 @@
             <artifactId>camunda-webapp-tomcat-standalone</artifactId>
             <version>7.1.0-Final</version>
             <type>war</type>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -42,6 +43,26 @@
                 <version>2.3</version>
                 <executions>
                     <execution>
+                        <id>extract-applicationContext</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.camunda.bpm.webapp</groupId>
+                                    <artifactId>camunda-webapp-tomcat-standalone</artifactId>
+                                    <version>7.1.0-Final</version>
+                                    <type>war</type>
+                                    <overWrite>true</overWrite>
+                                    <includes>WEB-INF/applicationContext.xml</includes>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>package-webapp-runner</id>
                         <phase>package</phase>
                         <goals><goal>copy</goal></goals>
                         <configuration>
@@ -56,6 +77,42 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>target/resources</directory>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>transform</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <transformationSets>
+                        <transformationSet>
+                            <dir>target/dependency</dir>
+                            <includes>
+                                <include>WEB-INF/applicationContext.xml</include>
+                            </includes>
+                            <outputDir>target/resources</outputDir>
+                            <stylesheet>src/main/resources/applicationContext.xsl</stylesheet>
+                        </transformationSet>
+                    </transformationSets>
+                </configuration>
             </plugin>
         </plugins>
     </build>
