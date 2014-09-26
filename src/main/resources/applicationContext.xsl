@@ -16,7 +16,9 @@
         <xsl:copy>
             <xsl:attribute name="xsi:schemaLocation">http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</xsl:attribute>
             <beans:bean class="java.net.URI" id="dbUrl">
-                <beans:constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
+                <beans:constructor-arg>
+                    <xsl:attribute name="value">#{systemEnvironment['DATABASE_URL']}</xsl:attribute>
+                </beans:constructor-arg>
             </beans:bean>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
