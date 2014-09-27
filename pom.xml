@@ -112,7 +112,7 @@
                                 <include>WEB-INF/applicationContext.xml</include>
                             </includes>
                             <outputDir>target/resources</outputDir>
-                            <stylesheet>src/main/resources/applicationContext.xsl</stylesheet>
+                            <stylesheet>src/main/filters/applicationContext.xsl</stylesheet>
                         </transformationSet>
                     </transformationSets>
                 </configuration>
