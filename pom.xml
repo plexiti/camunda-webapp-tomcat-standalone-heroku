@@ -8,13 +8,13 @@
     <name>camunda BPM Standalone Webapp for Heroku/Tomcat/Postgres</name>
     <url>https://github.com/plexiti/camunda-webapp-tomcat-standalone-heroku</url>
     <properties>
-        <camunda.bpm.version>7.1.0-Final</camunda.bpm.version>
+        <camunda-bpm.version>7.1.0-Final</camunda-bpm.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.camunda.bpm.webapp</groupId>
             <artifactId>camunda-webapp-tomcat-standalone</artifactId>
-            <version>${camunda.bpm.version}</version>
+            <version>${camunda-bpm.version}</version>
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
@@ -56,7 +56,7 @@
                                 <artifactItem>
                                     <groupId>org.camunda.bpm.webapp</groupId>
                                     <artifactId>camunda-webapp-tomcat-standalone</artifactId>
-                                    <version>${camunda.bpm.version}</version>
+                                    <version>${camunda-bpm.version}</version>
                                     <type>war</type>
                                     <overWrite>true</overWrite>
                                     <includes>WEB-INF/applicationContext.xml</includes>
