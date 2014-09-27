@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="java.net.URI" id="dbUrl">
+        <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+        <property name="targetDataSource">
+            <bean class="org.apache.commons.dbcp.BasicDataSource">
+                <property name="driverClassName" value="org.postgresql.Driver" />
+                <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }" />
+                <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }" />
+                <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }" />
+            </bean>
+        </property>
+    </bean>
+
+</beans>
