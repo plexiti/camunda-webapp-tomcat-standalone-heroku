@@ -119,4 +119,17 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <property>
+                    <name>env.CAMUNDA_BPM_VERSION</name>
+                </property>
+            </activation>
+            <properties>
+                <camunda-bpm.version>${env.CAMUNDA_BPM_VERSION}</camunda-bpm.version>
+            </properties>
+        </profile>
+    </profiles>
 </project>

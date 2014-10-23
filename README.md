@@ -4,7 +4,15 @@
 [![Tomcat](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/tomcat.svg)][tomcat]&nbsp;
 [![Postgres](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/postgresql.svg)][postgres]
 
-## How to deploy camunda BPM Standalone on Heroku/Tomcat/Postgres? 
+## How to deploy camunda BPM Standalone on Heroku/Tomcat/Postgres?
+ 
+Either you just push that button... :-)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+... and you will be asked to decide about the needed camunda BPM version on the next page.
+
+Or if you prefer the command line:
 
 ```bash
 git clone git@github.com:plexiti/camunda-webapp-tomcat-standalone-heroku.git
@@ -13,11 +21,16 @@ heroku create --region eu
 git push heroku master
 heroku open
 ``` 
-That's all there is to it. **Have fun!** Then **star** this repository :-), but also have even more fun ...
+That's all there is to it. **Have fun!** Then **star** this repository :-), but also have even more fun and ...
 
-## ... and deploy another version of camunda BPM
+## ... deploy another version of camunda BPM
 
-Just set the pom.xml property `camunda-bpm.version` - and you are done.
+If you don't want to use the button above, just set the pom.xml property `camunda-bpm.version` - and you 
+are done. Or, as a second possibility you can set an environment variable called CAMUNDA_BPM_VERSION:
+
+```bash
+heroku config:set CAMUNDA_BPM_VERSION=7.2.0-alpha5
+```
 
 The maven build creates a war overlay and uses a defensive xsl:stylesheet to add the postgres 
 configuration required for Heroku to camunda's applicationContext. So everything 
