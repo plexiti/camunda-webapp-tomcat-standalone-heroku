@@ -1,10 +1,10 @@
-# ![Camunda](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/camunda.png)&nbsp;camunda BPM Standalone - for ...
+# ![Camunda](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/camunda.png)&nbsp;camunda BPM for ... <a href="https://heroku.com/deploy"><img align="right" src="https://www.herokucdn.com/deploy/button.png"/></a>
 
 [![Heroku](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/heroku.png)][heroku]&nbsp;
 [![Tomcat](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/tomcat.svg)][tomcat]&nbsp;
 [![Postgres](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/postgresql.svg)][postgres]
 
-## How to deploy camunda BPM Standalone on Heroku/Tomcat/Postgres?
+## Deploy camunda BPM standalone on Heroku/Tomcat/Postgres
  
 Either you just push that button... :-)
 
