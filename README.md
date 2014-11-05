@@ -4,7 +4,7 @@
 [![Tomcat](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/tomcat.svg)][tomcat]&nbsp;
 [![Postgres](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/postgresql.svg)][postgres]
 
-## Deploy camunda BPM standalone on Heroku/Tomcat/Postgres
+## Deploy camunda BPM standalone on Heroku
  
 Either you just push that button... :-)
 
@@ -23,7 +23,7 @@ heroku open
 ``` 
 That's all there is to it. **Have fun!** Then **star** this repository :-), but also have even more fun and ...
 
-## ... deploy another version of camunda BPM
+## Deploy a different (than default) version
 
 If you don't want to use the button above, just set the pom.xml property `camunda-bpm.version` - and you 
 are done. Or, as a second possibility you can set an environment variable called CAMUNDA_BPM_VERSION:
