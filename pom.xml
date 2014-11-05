@@ -38,14 +38,19 @@
     </repositories>
     <scm>
         <developerConnection>scm:git:git@github.com:plexiti/camunda-webapp-tomcat-standalone-heroku.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
     <distributionManagement>
         <repository>
             <id>plexiti-foss-release</id>
             <name>plexiti-foss-release</name>
             <url>https://repository-plexiti-foss.forge.cloudbees.com/release/</url>
         </repository>
+        <snapshotRepository>
+            <id>plexiti-foss-snapshot</id>
+            <name>plexiti-foss-snapshot</name>
+            <url>https://repository-plexiti-foss.forge.cloudbees.com/snapshot/</url>
+        </snapshotRepository>
     </distributionManagement>
     <build>
         <finalName>camunda-webapp-tomcat-standalone-heroku</finalName>
