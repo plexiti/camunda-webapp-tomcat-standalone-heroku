@@ -3,7 +3,7 @@
     <groupId>org.camunda.bpm.extension</groupId>
     <artifactId>camunda-webapp-tomcat-standalone-heroku</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>camunda BPM Standalone Webapp for Heroku/Tomcat/Postgres</name>
     <url>https://github.com/plexiti/camunda-webapp-tomcat-standalone-heroku</url>
     <properties>
@@ -38,7 +38,7 @@
     </repositories>
     <scm>
         <developerConnection>scm:git:git@github.com:plexiti/camunda-webapp-tomcat-standalone-heroku.git</developerConnection>
-      <tag>1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
     <distributionManagement>
         <repository>
