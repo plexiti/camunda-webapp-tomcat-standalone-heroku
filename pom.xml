@@ -7,6 +7,7 @@
     <name>camunda BPM Standalone Webapp for Heroku/Tomcat/Postgres</name>
     <url>https://github.com/plexiti/camunda-webapp-tomcat-standalone-heroku</url>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <camunda-bpm.version>7.1.0-Final</camunda-bpm.version>
     </properties>
     <dependencies>
