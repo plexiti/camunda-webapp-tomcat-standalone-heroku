@@ -1,4 +1,4 @@
-# ![Camunda](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/camunda.png)&nbsp;camunda BPM for ... <a href="https://heroku.com/deploy"><img align="right" src="https://www.herokucdn.com/deploy/button.png"/></a>
+# ![Camunda](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/camunda.png)&nbsp;Camunda BPM for ... <a href="https://heroku.com/deploy"><img align="right" src="https://www.herokucdn.com/deploy/button.png"/></a>
 
 [![Heroku](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/heroku.png)][heroku]&nbsp;
 [![Tomcat](http://plexiti.github.io/camunda-webapp-tomcat-standalone-heroku/resources/images/tomcat.svg)][tomcat]&nbsp;
