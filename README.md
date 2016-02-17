@@ -10,7 +10,7 @@ Either you just push that button... :-)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-... and you will be asked to decide about the needed camunda BPM version on the next page.
+... and you will be asked to decide about the needed Camunda BPM version on the next page.
 
 Or if you prefer the command line:
 
@@ -29,7 +29,7 @@ If you don't want to use the button above, just set the pom.xml property `camund
 are done. Or, as a second possibility you can set an environment variable called CAMUNDA_BPM_VERSION:
 
 ```bash
-heroku config:set CAMUNDA_BPM_VERSION=7.2.0-alpha5
+heroku config:set CAMUNDA_BPM_VERSION=7.5.0-alpha1
 ```
 
 The maven build creates a war overlay and uses a defensive xsl:stylesheet to add the postgres 
